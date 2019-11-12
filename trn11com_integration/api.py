@@ -1,5 +1,5 @@
 import frappe
-import zeep
+from zeep import Client, Settings
 
 
 @frappe.whitelist()
@@ -8,7 +8,8 @@ def test_integration(testappkey, testappsecret):
     soapservicepath = "/ws/CategoryService.wsdl"
 
     wsdl = soapserver + soapservicepath
-    client = zeep.Client(str(wsdl))
+    settings = Settings(strict=False)
+    client = Client(str(wsdl), settings=settings)
 
     # company = frappe.defaults.get_user_default("Company")
     auth = [{

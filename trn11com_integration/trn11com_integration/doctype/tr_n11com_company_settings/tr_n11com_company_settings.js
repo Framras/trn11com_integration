@@ -7,6 +7,7 @@ frappe.ui.form.on('TR n11com Company Settings', {
 	// }
 		test_integration: function(frm){
 	    if(frm.doc.appkey!="" && frm.doc.appsecret!=""){
+	        frm.doc.test_integration.disabled = true
 	        frappe.call({
 	            method: "trn11com_integration.api.test_integration",
 	            args:{
@@ -15,6 +16,7 @@ frappe.ui.form.on('TR n11com Company Settings', {
 	            },
 	            callback: function(r){
                     frm.set_value("integrationresult", r.message)
+                    frm.doc.test_integration.disabled = false
 	            }
 	        })
 	    }
