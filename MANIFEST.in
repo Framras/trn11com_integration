@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include trn11com_integration *.css
+recursive-include trn11com_integration *.csv
+recursive-include trn11com_integration *.html
+recursive-include trn11com_integration *.ico
+recursive-include trn11com_integration *.js
+recursive-include trn11com_integration *.json
+recursive-include trn11com_integration *.md
+recursive-include trn11com_integration *.png
+recursive-include trn11com_integration *.py
+recursive-include trn11com_integration *.svg
+recursive-include trn11com_integration *.txt
+recursive-exclude trn11com_integration *.pyc
