@@ -17,5 +17,4 @@ def test_integration(testappkey, testappsecret):
         # 'appSecret': frappe.db.get_value("TR n11com Company Settings", "company", "appsecret")
         'appSecret': str(testappsecret)
     }]
-
-    return client.service.GetTopLevelCategories(auth)
+    return client.service.GetTopLevelCategories(auth).result.status
