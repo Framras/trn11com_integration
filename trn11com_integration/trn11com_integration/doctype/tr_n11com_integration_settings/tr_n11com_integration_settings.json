@@ -6,8 +6,7 @@
   "field_order": [
     "enable",
     "n11com_section",
-    "server",
-    "n11com_envelopeschema"
+    "server"
   ],
   "fields": [
     {
@@ -25,15 +24,10 @@
       "fieldname": "server",
       "fieldtype": "Data",
       "label": "Server Setting"
-    },
-    {
-      "fieldname": "n11com_envelopeschema",
-      "fieldtype": "Data",
-      "label": "Envelope Schema"
     }
   ],
   "issingle": 1,
-  "modified": "2019-11-12 12:40:20.823998",
+  "modified": "2019-11-12 15:29:13.209866",
   "modified_by": "Administrator",
   "module": "Trn11Com Integration",
   "name": "TR n11com Integration Settings",
