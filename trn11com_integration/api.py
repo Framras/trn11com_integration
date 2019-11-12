@@ -8,7 +8,7 @@ def test_integration(testappkey, testappsecret):
     soapservicepath = "/ws/CategoryService.wsdl"
 
     wsdl = soapserver + soapservicepath
-    settings = Settings(strict=False)
+    settings = Settings(strict=False, raw_response=False)
     client = Client(str(wsdl), settings=settings)
 
     # company = frappe.defaults.get_user_default("Company")
@@ -18,4 +18,5 @@ def test_integration(testappkey, testappsecret):
         # 'appSecret': frappe.db.get_value("TR n11com Company Settings", "company", "appsecret")
         'appSecret': str(testappsecret)
     }]
+
     return client.service.GetTopLevelCategories(auth).result.status
