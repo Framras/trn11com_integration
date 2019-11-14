@@ -1,87 +1,94 @@
 {
-  "autoname": "field:company_name",
-  "creation": "2019-11-12 13:14:06.659496",
-  "doctype": "DocType",
-  "editable_grid": 1,
-  "engine": "InnoDB",
-  "field_order": [
-    "company_name",
-    "n11com_section",
-    "appkey",
-    "appsecret",
-    "column_break_5",
-    "test_integration",
-    "integrationresult"
-  ],
-  "fields": [
-    {
-      "fieldname": "company_name",
-      "fieldtype": "Link",
-      "label": "Company",
-      "options": "Company",
-      "unique": 1
-    },
-    {
-      "fieldname": "n11com_section",
-      "fieldtype": "Section Break",
-      "label": "n11.com Settings"
-    },
-    {
-      "fieldname": "appkey",
-      "fieldtype": "Data",
-      "label": "Key"
-    },
-    {
-      "fieldname": "appsecret",
-      "fieldtype": "Data",
-      "label": "Secret"
-    },
-    {
-      "fieldname": "column_break_5",
-      "fieldtype": "Column Break"
-    },
-    {
-      "fieldname": "test_integration",
-      "fieldtype": "Button",
-      "label": "Test Integration"
-    },
-    {
-      "fieldname": "integrationresult",
-      "fieldtype": "Small Text",
-      "label": "Test Result",
-      "read_only": 1
-    }
-  ],
-  "modified": "2019-11-12 13:14:06.659496",
-  "modified_by": "Administrator",
-  "module": "Trn11Com Integration",
-  "name": "TR n11com Company Settings",
-  "owner": "Administrator",
-  "permissions": [
-    {
-      "create": 1,
-      "delete": 1,
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "System Manager",
-      "share": 1,
-      "write": 1
-    },
-    {
-      "email": 1,
-      "export": 1,
-      "print": 1,
-      "read": 1,
-      "report": 1,
-      "role": "All",
-      "share": 1
-    }
-  ],
-  "quick_entry": 1,
-  "sort_field": "modified",
-  "sort_order": "DESC",
-  "track_changes": 1
+ "autoname": "field:company_name",
+ "creation": "2019-11-12 13:14:06.659496",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company_name",
+  "enable",
+  "n11com_section",
+  "appkey",
+  "appsecret",
+  "column_break_5",
+  "test_integration",
+  "integrationresult"
+ ],
+ "fields": [
+  {
+   "fieldname": "company_name",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "unique": 1
+  },
+  {
+   "fieldname": "n11com_section",
+   "fieldtype": "Section Break",
+   "label": "n11.com Settings"
+  },
+  {
+   "fieldname": "appkey",
+   "fieldtype": "Data",
+   "label": "Key"
+  },
+  {
+   "fieldname": "appsecret",
+   "fieldtype": "Data",
+   "label": "Secret"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_integration",
+   "fieldtype": "Button",
+   "label": "Test Integration"
+  },
+  {
+   "fieldname": "integrationresult",
+   "fieldtype": "Small Text",
+   "label": "Test Result",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Enable"
+  }
+ ],
+ "modified": "2019-11-15 00:41:39.336432",
+ "modified_by": "Administrator",
+ "module": "Trn11Com Integration",
+ "name": "TR n11com Company Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
 }

@@ -4,17 +4,13 @@
   "editable_grid": 1,
   "engine": "InnoDB",
   "field_order": [
-    "enable",
     "n11com_section",
-    "server"
+    "server",
+    "default_namespace",
+    "strict",
+    "raw_response"
   ],
   "fields": [
-    {
-      "default": "0",
-      "fieldname": "enable",
-      "fieldtype": "Check",
-      "label": "Enable"
-    },
     {
       "fieldname": "n11com_section",
       "fieldtype": "Section Break",
@@ -24,10 +20,27 @@
       "fieldname": "server",
       "fieldtype": "Data",
       "label": "Server Setting"
+    },
+    {
+      "fieldname": "default_namespace",
+      "fieldtype": "Data",
+      "label": "Default Namespace"
+    },
+    {
+      "default": "0",
+      "fieldname": "strict",
+      "fieldtype": "Check",
+      "label": "Strict"
+    },
+    {
+      "default": "0",
+      "fieldname": "raw_response",
+      "fieldtype": "Check",
+      "label": "Raw Response"
     }
   ],
   "issingle": 1,
-  "modified": "2019-11-12 15:29:13.209866",
+  "modified": "2019-11-15 00:41:12.517765",
   "modified_by": "Administrator",
   "module": "Trn11Com Integration",
   "name": "TR n11com Integration Settings",
