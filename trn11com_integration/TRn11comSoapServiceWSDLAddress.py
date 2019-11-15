@@ -1,9 +1,10 @@
 # importing enum for enumerations
-import enum
+from enum import Enum, unique
 
 
+@unique
 # creating enumerations using class
-class TRn11com_SoapServiceWSDLAddress(enum.Enum):
+class TRn11comSoapServiceWSDLAddress(Enum):
     Category = "/ws/CategoryService.wsdl"
     Product = "/ws/ProductService.wsdl"
     Order = "/ws/OrderService.wsdl"

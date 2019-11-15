@@ -1,4 +1,6 @@
 from zeep import Client, Settings
+from trn11com_integration import TRn11comSoapServiceWSDLAddress as WSDLAddress
+
 
 def get_n11com_auth(servicecategory):
     appkey = "df848c60-6f80-473b-b129-a00f379a21f1"
@@ -39,14 +41,7 @@ def get_n11com_service(servicecategory):
 
 
 def get_n11com_servicepath(servicecategory):
-    if servicecategory == "Category":
-        return "/ws/CategoryService.wsdl"
-    elif servicecategory == "Product":
-        return "/ws/ProductService.wsdl"
-    elif servicecategory == "Order":
-        return "/ws/OrderService.wsdl"
-    else:
-        return ""
+    return WSDLAddress[servicecategory]
 
 
 sellercode = "framras"
