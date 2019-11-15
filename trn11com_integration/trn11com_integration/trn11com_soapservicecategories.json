@@ -1,0 +1,117 @@
+{
+  "CATEGORY": "n11.com SOAP service Category",
+  "implemented": [
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "Category",
+          "tr": "Kategori Servisleri"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/CategoryService.wsdl",
+      "SERVICE": "CategoryServicePortService",
+      "PORT": "CategoryServicePortSoap11"
+    },
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "Product",
+          "tr": "Ürün Servisleri"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/ProductService.wsdl",
+      "SERVICE": "ProductServicePortService",
+      "PORT": "ProductServicePortSoap11"
+    },
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "Order",
+          "tr": "Sipariş Servisleri"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/OrderService.wsdl",
+      "SERVICE": "OrderServicePortService",
+      "PORT": "OrderServicePortSoap11"
+    }
+  ],
+  "not implemented": [
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "City",
+          "tr": "Şehir Servisleri"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/CityService.wsdl",
+      "SERVICE": "CityServicePortService",
+      "PORT": "CityServicePortSoap11"
+    },
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "ProductSelling",
+          "tr": "Ürün Satış Servisleri"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/ProductSellingService.wsdl",
+      "SERVICE": "ProductSellingServicePortService",
+      "PORT": "ProductSellingServicePortSoap11"
+    },
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "ProductStock",
+          "tr": "Ürün Stok Servisleri"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/ProductStockService.wsdl",
+      "SERVICE": "ProductStockServicePortService",
+      "PORT": "ProductStockServicePortSoap11"
+    },
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "ShipmentCompany",
+          "tr": "Kargo Şirketi Servisi"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/ShipmentCompanyService.wsdl",
+      "SERVICE": "ShipmentCompanyServicePortService",
+      "PORT": "ShipmentCompanyServicePortSoap11"
+    },
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "Shipment",
+          "tr": "Teslimat Şablonu Servisi"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/ShipmentService.wsdl",
+      "SERVICE": "ShipmentServicePortService",
+      "PORT": "ShipmentServicePortSoap11"
+    },
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "Settlement",
+          "tr": "Satış/Uzlaşma Servisi"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/SettlementService.wsdl",
+      "SERVICE": "SettlementServicePortService",
+      "PORT": "SettlementServicePortSoap11"
+    },
+    {
+      "SERVICE_NAME": [
+        {
+          "en": "Ticket",
+          "tr": "Mağaza Talep Servisi"
+        }
+      ],
+      "WSDL_ADDRESS": "/ws/TicketService.wsdl",
+      "SERVICE": "TicketServicePortService",
+      "PORT": "TicketServicePortSoap11"
+    }
+  ]
+}

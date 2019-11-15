@@ -1,6 +1,5 @@
 from zeep import Client, Settings
 
-
 def get_n11com_auth(servicecategory):
     appkey = "df848c60-6f80-473b-b129-a00f379a21f1"
     appsecret = "lkuFEB2CxA5cUdun"
