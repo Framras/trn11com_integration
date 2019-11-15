@@ -1,5 +1,7 @@
+from TRn11comSoapServiceWSDLAddress import *
+from TRn11comSoapServiceService import *
+from TRn11comSoapServicePort import *
 from zeep import Client, Settings
-from trn11com_integration import TRn11comSoapServiceWSDLAddress as WSDLAddress
 
 
 def get_n11com_auth(servicecategory):
@@ -25,23 +27,14 @@ def get_n11com_typefactory(servicecategory):
 
 
 def get_n11com_service(servicecategory):
-    service = ""
-    port = ""
-    if servicecategory == "Category":
-        service = "CategoryServicePortService"
-        port = "CategoryServicePortSoap11"
-    elif servicecategory == "Product":
-        service = "ProductServicePortService"
-        port = "ProductServicePortSoap11"
-    elif servicecategory == "Order":
-        service = "OrderServicePortService"
-        port = "OrderServicePortSoap11"
+    service = TRn11comSoapServiceService[servicecategory].value
+    port = TRn11comSoapServicePort[servicecategory].value
 
     return get_n11com_client(servicecategory).bind(service, port)
 
 
 def get_n11com_servicepath(servicecategory):
-    return WSDLAddress[servicecategory]
+    return TRn11comSoapServiceWSDLAddress[servicecategory].value
 
 
 sellercode = "framras"

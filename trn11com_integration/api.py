@@ -1,5 +1,8 @@
 import frappe
 from zeep import Client, Settings
+from TRn11comSoapServiceWSDLAddress import *
+from TRn11comSoapServiceService import *
+from TRn11comSoapServicePort import *
 
 
 def get_n11com_auth(servicecategory):
@@ -46,30 +49,20 @@ def get_n11com_typefactory(servicecategory):
 
 
 def get_n11com_service(servicecategory):
-    service = ""
-    port = ""
-    if servicecategory == "Category":
-        service = "CategoryServicePortService"
-        port = "CategoryServicePortSoap11"
-    elif servicecategory == "Product":
-        service = "ProductServicePortService"
-        port = "ProductServicePortSoap11"
-    elif servicecategory == "Order":
-        service = "OrderServicePortService"
-        port = "OrderServicePortSoap11"
+    if servicecategory == "":
+        return ""
+    else:
+        service = TRn11comSoapServiceService[servicecategory].value
+        port = TRn11comSoapServicePort[servicecategory].value
 
-    return get_n11com_client(servicecategory).bind(service, port)
+        return get_n11com_client(servicecategory).bind(service, port)
 
 
 def get_n11com_servicepath(servicecategory):
-    if servicecategory == "Category":
-        return "/ws/CategoryService.wsdl"
-    elif servicecategory == "Product":
-        return "/ws/ProductService.wsdl"
-    elif servicecategory == "Order":
-        return "/ws/OrderService.wsdl"
-    else:
+    if servicecategory == "":
         return ""
+    else:
+        return TRn11comSoapServiceWSDLAddress[servicecategory].value
 
 
 @frappe.whitelist()
